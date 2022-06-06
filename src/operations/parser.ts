@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
+import structure from '../../structure.json';
+
 interface IStructureElement {
   name: string;
   children?: string[];
@@ -12,11 +14,6 @@ interface IStructure {
 
 export class Parser {
   load(): IStructure {
-    const json = JSON.parse(
-      fs
-        .readFileSync(path.resolve(`.${path.posix.sep}structure.json`))
-        .toString(),
-    ) as IStructure;
-    return json;
+    return structure as IStructure;
   }
 }
