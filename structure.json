@@ -1,0 +1,21 @@
+{
+  "structure": [
+    {
+      "name": "domain",
+      "children": [
+        "value-objects",
+        "entities",
+        "aggregates",
+        "events",
+        "subscriptions",
+        "repositories",
+        "services"
+      ]
+    },
+    { "name": "application", "children": ["use-cases"] },
+    {
+      "name": "infrastructure",
+      "children": ["models", "repositories", "mappers"]
+    }
+  ]
+}

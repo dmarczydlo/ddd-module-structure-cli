@@ -1,0 +1,35 @@
+{
+  "name": "ddd-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/cli.js",
+  "scripts": {
+    "build": "npm run tsc && npm run chmod",
+    "chmod": "chmod u+x ./bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**/*.{js,ts}' --fix",
+    "tsc": "tsc",
+    "prettier": "prettier --write ."
+  },
+  "bin": {
+    "generate": "./bin/cli.js"
+  },
+  "keywords": [],
+  "author": "Daniel Marczydlo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.40",
+    "@types/yargs": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "chalk": "^4.0.1",
+    "yargs": "^17.5.1"
+  }
+}
